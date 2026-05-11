@@ -43,7 +43,7 @@ date: 2026-04-30
 
 **Accueil des petits gabarits** (moins de 10 kg)
 
-Nous accueillerons désormais les chiens de petit gabarit (moins de 10 kg) dans une pièce chauffée et sécurisée à l'intérieur de la maison. **3 places uniquement** · **20 € / jour**.
+Nous accueillons désormais les chiens de petit gabarit (moins de 10 kg) dans une pièce chauffée et sécurisée à l'intérieur de la maison. **3 places uniquement** · **20 € / jour**.
 
 <!-- FIN ACTUALITÉ 3 -->
 
