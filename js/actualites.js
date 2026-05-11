@@ -7,74 +7,77 @@ function markdownToHtml(text) {
     .replace(/\n/g, '<br>');
 }
 
-// Parser le front matter YAML des fichiers .md
-function parseFrontMatter(content) {
-  const frontMatterRegex = /^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/;
-  const match = content.match(frontMatterRegex);
+// Parser le fichier actualites.md
+function parseActualitesMD(content) {
+  const actualites = [];
   
-  if (!match) return null;
+  // Découper par le séparateur ---ACTU---
+  const blocks = content.split('---ACTU---');
   
-  const frontMatter = match[1];
-  const body = match[2];
-  
-  const data = {};
-  const lines = frontMatter.split('\n');
-  
-  lines.forEach(line => {
-    const colonIndex = line.indexOf(':');
-    if (colonIndex > -1) {
-      const key = line.substring(0, colonIndex).trim();
-      let value = line.substring(colonIndex + 1).trim();
-      
-      // Enlever les guillemets
-      value = value.replace(/^["']|["']$/g, '');
-      
-      // Convertir les booléens
-      if (value === 'true') value = true;
-      if (value === 'false') value = false;
-      
-      data[key] = value;
+  // On ignore le premier bloc (avant la première actualité)
+  for (let i = 1; i < blocks.length; i += 2) {
+    if (i + 1 >= blocks.length) break;
+    
+    const headerBlock = blocks[i].trim();
+    const contentBlock = blocks[i + 1].trim();
+    
+    // Parser les métadonnées
+    const data = {};
+    const lines = headerBlock.split('\n');
+    
+    lines.forEach(line => {
+      const colonIndex = line.indexOf(':');
+      if (colonIndex > -1) {
+        const key = line.substring(0, colonIndex).trim();
+        let value = line.substring(colonIndex + 1).trim();
+        
+        // Enlever les guillemets si présents
+        value = value.replace(/^["']|["']$/g, '');
+        
+        // Convertir les booléens
+        if (value === 'true') value = true;
+        if (value === 'false') value = false;
+        
+        data[key] = value;
+      }
+    });
+    
+    // Extraire le contenu (tout ce qui est après ---ACTU--- jusqu'au prochain commentaire ou fin)
+    const bodyMatch = contentBlock.match(/^([\s\S]*?)(?:<!--|$)/);
+    if (bodyMatch) {
+      data.body = bodyMatch[1].trim();
     }
-  });
+    
+    // Ajouter seulement si on a au minimum un titre
+    if (data.title) {
+      actualites.push(data);
+    }
+  }
   
-  data.body = body.trim();
-  return data;
+  return actualites;
 }
 
-// Liste des fichiers markdown à charger
-// IMPORTANT : Vous devez mettre à jour cette liste quand vous ajoutez des actualités
-const actuFiles = [
-  'actualites/2026-05-11-encore-quelques-places-disponible-cet-été.md',
-];
-
-// Chargement automatique des actualités depuis les fichiers .md
+// Chargement automatique des actualités depuis actualites.md
 async function loadActualites() {
   try {
     const container = document.getElementById('actualites-container');
     if (!container) return;
 
-    // Charger tous les fichiers markdown
-    const promises = actuFiles.map(file => 
-      fetch(file)
-        .then(response => {
-          if (!response.ok) throw new Error(`Fichier ${file} non trouvé`);
-          return response.text();
-        })
-        .then(content => parseFrontMatter(content))
-        .catch(error => {
-          console.error(`Erreur chargement ${file}:`, error);
-          return null;
-        })
-    );
-
-    const actualites = (await Promise.all(promises)).filter(a => a !== null);
+    // Charger le fichier actualites.md
+    const response = await fetch('actualites.md');
+    if (!response.ok) {
+      throw new Error('Fichier actualites.md non trouvé');
+    }
+    
+    const content = await response.text();
+    const actualites = parseActualitesMD(content);
     
     if (actualites.length === 0) {
       container.innerHTML = '<p style="text-align:center;color:var(--gris);">Aucune actualité pour le moment.</p>';
       return;
     }
     
-    // Filtrer les actualités actives et trier par date
+    // Filtrer les actualités actives et trier par date (plus récent en premier)
     const actives = actualites
       .filter(a => a.active === true)
       .sort((a, b) => new Date(b.date) - new Date(a.date));
