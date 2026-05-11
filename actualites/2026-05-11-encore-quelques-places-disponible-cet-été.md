@@ -1,9 +1,9 @@
 ---
-title: Encore quelques places disponibles cet été !!!
-type: info
-icon: ⚠️
+title: Fermeture exceptionnelle OCTOBRE 2026
+type: fermeture
+icon: 🔨
 color: "#ff9800"
 date: 2026-05-11T05:06:43.139Z
 active: true
 ---
-Encore quelques places pour cet été, n'attendez pas trop pour réserver le séjour de votre loulou !!!
+La pension canine sera fermé durant le mois d'octobre 2026 pour travaux.
