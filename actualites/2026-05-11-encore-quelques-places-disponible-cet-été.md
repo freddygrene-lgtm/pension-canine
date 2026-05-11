@@ -1,5 +1,5 @@
 ---
-title: Encore quelques places disponible cet été !!!
+title: Encore quelques places disponibles cet été !!!
 type: info
 icon: ⚠️
 color: "#ff9800"
