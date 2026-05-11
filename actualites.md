@@ -34,7 +34,7 @@ La pension sera **fermée pour travaux** durant tout le mois d'octobre 2026. Des
 
 <!-- ACTUALITÉ 3 -->
 ---ACTU---
-title: Nouveauté avril 2026
+title: Nouveauté
 icon: 🏡
 color: #4caf50
 active: true
@@ -43,7 +43,7 @@ date: 2026-04-30
 
 **Accueil des petits gabarits** (moins de 10 kg)
 
-Dès **fin avril 2026**, nous accueillerons les chiens de petit gabarit (moins de 10 kg) dans une pièce chauffée et sécurisée à l'intérieur de la maison. **3 places uniquement** · **20 € / jour**.
+Nous accueillerons désormais les chiens de petit gabarit (moins de 10 kg) dans une pièce chauffée et sécurisée à l'intérieur de la maison. **3 places uniquement** · **20 € / jour**.
 
 <!-- FIN ACTUALITÉ 3 -->
 
@@ -54,28 +54,10 @@ GUIDE D'UTILISATION
 ═══════════════════════════════════════════════════════════════
 
 Pour AJOUTER une nouvelle actualité :
-1. Copiez le bloc ci-dessous
+1. Copiez un bloc
 2. Collez-le EN HAUT du fichier (après la ligne "# Actualités...")
 3. Modifiez les informations
-4. Uploadez le fichier sur Netlify
-
-TEMPLATE À COPIER :
-───────────────────────────────────────────────────────────────
-
-<!-- ACTUALITÉ X -->
----ACTU---
-title: Votre titre ici
-icon: ⚠️
-color: #ff9800
-active: true
-date: 2026-XX-XX
----ACTU---
-
-**Votre sous-titre en gras**
-
-Votre contenu ici. Utilisez **gras** ou *italique*.
-
-<!-- FIN ACTUALITÉ X -->
+4. Uploadez le fichier sur github
 
 ───────────────────────────────────────────────────────────────
 
