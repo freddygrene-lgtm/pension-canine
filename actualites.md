@@ -2,16 +2,13 @@
 
 <!-- ACTUALITÉ 1 -->
 ---ACTU---
-title: Fermeture exceptionnelle
-icon: ⚠️
-color: #ff9800
-active: true
-date: 2026-05-08
+title: 
+icon: 
+color: 
+active: 
+date: 
 ---ACTU---
 
-**Week-end du 8, 9 et 10 mai 2026**
-
-La pension sera **fermée** durant ce week-end. Nous vous prions de bien vouloir anticiper vos réservations en conséquence. Merci de votre compréhension.
 
 <!-- FIN ACTUALITÉ 1 -->
 
