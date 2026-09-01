@@ -28,23 +28,6 @@ La pension sera **fermée pour travaux** durant tout le mois d'octobre 2026. Des
 
 <!-- FIN ACTUALITÉ 2 -->
 
-
-<!-- ACTUALITÉ 3 -->
----ACTU---
-title: Nouveauté
-icon: 🏡
-color: #4caf50
-active: true
-date: 2026-04-30
----ACTU---
-
-**Accueil des petits gabarits** (moins de 10 kg)
-
-Nous accueillons désormais les chiens de petit gabarit (moins de 10 kg) dans une pièce chauffée et sécurisée à l'intérieur de la maison. **3 places uniquement** · **20 € / jour**.
-
-<!-- FIN ACTUALITÉ 3 -->
-
-
 <!-- 
 ═══════════════════════════════════════════════════════════════
 GUIDE D'UTILISATION
