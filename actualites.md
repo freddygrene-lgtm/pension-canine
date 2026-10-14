@@ -14,8 +14,8 @@ date:
 
 <!-- ACTUALITÉ 2 -->
 ---ACTU---
-title: Travaux prévus
-icon: 🔨
+title: Réouverture
+icon: 📢
 color: #d32f2f
 active: true
 date: 2026-10-01
