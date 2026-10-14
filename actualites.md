@@ -23,8 +23,8 @@ date: 2026-10-01
 
 ** Réouverture de la pension dès le vendredi 30 octobre 2026 **
 
-N'hésitez pas à réserver vos séjours pour cette fin d'année 2026 !!! 
-Merci de votre confiance
+N'hésitez pas à réserver vos séjours pour cette fin d'année 2026 mais également pour le début d'année 2027 !!! 
+Au plaisir de voir vos loulous 😉
 
 <!-- FIN ACTUALITÉ 2 -->
 
