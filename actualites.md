@@ -21,9 +21,10 @@ active: true
 date: 2026-10-01
 ---ACTU---
 
-**Tout le mois d'octobre 2026**
+** Réouverture de la pension dès le vendredi 30 octobre 2026 **
 
-La pension sera **fermée pour travaux** durant tout le mois d'octobre 2026. Des améliorations et agrandissements sont prévus pour offrir encore plus de confort à vos compagnons. Merci de planifier vos séjours en dehors de cette période.
+N'hésitez pas à réserver vos séjours pour cette fin d'année 2026 !!! 
+Merci de votre confiance
 
 <!-- FIN ACTUALITÉ 2 -->
 
