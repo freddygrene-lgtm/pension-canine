@@ -6,6 +6,26 @@ media_folder: "images/actualites"
 public_folder: "/images/actualites"
 
 collections:
+  - name: "pages"
+    label: "Pages du site"
+    files:
+      - name: "accueil"
+        label: "Page d'accueil"
+        file: "content/accueil.yml"
+        fields:
+          - {label: "Petit texte au-dessus du titre", name: "eyebrow", widget: "string"}
+          - {label: "Titre principal", name: "title", widget: "string"}
+          - {label: "Texte de présentation", name: "description", widget: "text"}
+          - {label: "Message à mettre en avant", name: "reservation_message", widget: "markdown"}
+          - label: "Style du message"
+            name: "message_style"
+            widget: "select"
+            options:
+              - {label: "Vert", value: "green"}
+              - {label: "Bleu", value: "blue"}
+              - {label: "Orange", value: "orange"}
+              - {label: "Rouge", value: "red"}
+          - {label: "Afficher le message", name: "show_message", widget: "boolean", default: true}
   - name: "actualites"
     label: "Actualités"
     folder: "actualites"
