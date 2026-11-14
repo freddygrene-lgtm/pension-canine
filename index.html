@@ -594,6 +594,16 @@
       border-radius: 8px;
       margin-top: 20px;
     }
+  
+    .home-notice { max-width: 100%; padding: 24px 20px; }
+    .home-notice-inner { max-width: 1000px; margin: auto; border-radius: 14px; padding: 22px 26px; box-shadow: var(--shadow); }
+    .home-notice-inner h2 { margin-bottom: 14px; font-size: clamp(1.35rem, 3vw, 1.8rem); }
+    .home-notice-inner h2::after { display: none; }
+    .home-notice-inner p, .home-notice-inner li { line-height: 1.7; }
+    .home-notice-inner.green { background: #e8f5e9; border-left: 5px solid #2e7d32; }
+    .home-notice-inner.blue { background: #e3f2fd; border-left: 5px solid #2196f3; }
+    .home-notice-inner.orange { background: #fff3e0; border-left: 5px solid #ff9800; }
+    .home-notice-inner.red { background: #ffebee; border-left: 5px solid #d32f2f; }
   </style>
   
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -626,6 +636,14 @@
   <a href="#avis">⭐ Avis Google</a>
   <a href="#carte">📍 Nous trouver</a>
 </nav>
+
+<!-- Message d'accueil modifiable depuis l'administration -->
+<section id="message-accueil" class="home-notice" hidden>
+  <div class="home-notice-inner green">
+    <h2 id="home-notice-title">Information</h2>
+    <div id="home-notice-content"></div>
+  </div>
+</section>
 
 <!-- ══ ACTUALITÉS ══ -->
 <section id="actualites" style="background:linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);border-radius:24px;max-width:100%;padding:60px 20px;">
@@ -987,5 +1005,37 @@ ${message}`;
   }
 </script>
 
+
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
+<script>
+(async function loadEditableHomepage() {
+  try {
+    const response = await fetch('/content/accueil.yml');
+    if (!response.ok) return;
+    const raw = await response.text();
+    const page = jsyaml.load(raw) || {};
+    const eyebrow = document.querySelector('.header-tagline .eyebrow');
+    const title = document.querySelector('.header-tagline h1');
+    const description = document.querySelector('.header-tagline p');
+    if (eyebrow && page.eyebrow) eyebrow.textContent = page.eyebrow;
+    if (title && page.title) title.textContent = page.title;
+    if (description && page.description) description.textContent = page.description;
+    if (page.show_message && page.reservation_message) {
+      const section = document.getElementById('message-accueil');
+      const panel = section.querySelector('.home-notice-inner');
+      const style = ['green','blue','orange','red'].includes(page.message_style) ? page.message_style : 'green';
+      panel.className = 'home-notice-inner ' + style;
+      document.getElementById('home-notice-title').textContent = 'Informations et réservations';
+      document.getElementById('home-notice-content').innerHTML =
+        DOMPurify.sanitize(marked.parse(page.reservation_message));
+      section.hidden = false;
+    }
+  } catch (error) {
+    console.warn('Le contenu modifiable de l’accueil n’a pas pu être chargé.', error);
+  }
+})();
+</script>
 </body>
 </html>
