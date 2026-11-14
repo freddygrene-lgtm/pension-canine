@@ -1,13 +1,16 @@
-eyebrow: "📍 Le Val-Larrey · Côte-d'Or"
-title: "Pension Canine de La Prêlée"
-description: "Une pension familiale où le bien-être de votre chien est notre priorité."
-reservation_message: |
+eyebrow: 📍 Le Val-Larrey · Côte-d'Or
+title: Pension Canine de La Prêlée
+description: Une pension familiale où le bien-être de votre chien est notre priorité.
+reservation_message: >
   🐾 **Pensez à réserver à l'avance !**
+
 
   Les périodes de vacances scolaires, les fêtes de fin d'année et les week-ends prolongés sont particulièrement demandés.
 
+
   **La pension affiche déjà complet pour Noël et le Nouvel An.**
 
+
   Anticipez vos réservations afin de garantir une place à votre compagnon.
-message_style: "orange"
+message_style: blue
 show_message: true
