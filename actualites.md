@@ -20,7 +20,7 @@ color: #d32f2f
 active: true
 date: 2026-10-01
 ---ACTU---
-### 🐾 Pensez à réserver à l'avance !
+🐾 Pensez à réserver à l'avance !
 
 Les périodes de vacances scolaires, les fêtes de fin d'année et les week-ends prolongés sont particulièrement demandés.
 
@@ -30,7 +30,9 @@ Les périodes de vacances scolaires, les fêtes de fin d'année et les week-ends
 
 Afin de vous accueillir dans les meilleures conditions et de préserver le confort de chaque chien, le nombre de places disponibles reste limité.
 
-N'attendez pas le dernier moment pour organiser le séjour de votre compagnon. Merci de votre confiance et à très bientôt à la Pension Canine de La Prêlée ! 🐶
+N'attendez pas le dernier moment pour organiser le séjour de votre compagnon. 
+
+Merci de votre confiance et à très bientôt à la Pension Canine de La Prêlée ! 🐶
 
 <!-- FIN ACTUALITÉ 2 -->
 
