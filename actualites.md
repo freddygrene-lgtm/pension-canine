@@ -14,17 +14,23 @@ date:
 
 <!-- ACTUALITÉ 2 -->
 ---ACTU---
-title: Réouverture
+title: Réservation
 icon: 📢
 color: #d32f2f
 active: true
 date: 2026-10-01
 ---ACTU---
+### 🐾 Pensez à réserver à l'avance !
 
-** Réouverture de la pension dès le vendredi 30 octobre 2026 **
+Les périodes de vacances scolaires, les fêtes de fin d'année et les week-ends prolongés sont particulièrement demandés.
 
-N'hésitez pas à réserver vos séjours pour cette fin d'année 2026 mais également pour le début d'année 2027 !!! 
-Au plaisir de voir vos loulous 😉
+**Anticipez vos réservations afin de garantir une place à votre compagnon !**
+
+📅 À noter : la pension affiche déjà complet pour les fêtes de **Noël et du Nouvel An**.
+
+Afin de vous accueillir dans les meilleures conditions et de préserver le confort de chaque chien, le nombre de places disponibles reste limité.
+
+N'attendez pas le dernier moment pour organiser le séjour de votre compagnon. Merci de votre confiance et à très bientôt à la Pension Canine de La Prêlée ! 🐶
 
 <!-- FIN ACTUALITÉ 2 -->
 
