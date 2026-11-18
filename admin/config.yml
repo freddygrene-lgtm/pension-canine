@@ -26,6 +26,11 @@ collections:
               - {label: "Orange", value: "orange"}
               - {label: "Rouge", value: "red"}
           - {label: "Afficher le message", name: "show_message", widget: "boolean", default: true}
+          - {label: "Horaires du lundi au vendredi", name: "hours_weekdays", widget: "string"}
+          - {label: "Horaires du samedi et dimanche", name: "hours_weekend", widget: "string"}
+          - {label: "Texte sous les horaires", name: "hours_note", widget: "string"}
+          - {label: "Tarif pour un chien (€ / jour)", name: "price_one_dog", widget: "number", value_type: "int", min: 0}
+          - {label: "Tarif pour deux chiens (€ / jour)", name: "price_two_dogs", widget: "number", value_type: "int", min: 0}
   - name: "actualites"
     label: "Actualités"
     folder: "actualites"
