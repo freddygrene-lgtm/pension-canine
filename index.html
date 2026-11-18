@@ -683,7 +683,7 @@
     <div class="card">
       <span class="card-icon">📋</span>
       <h3>Conditions d'accueil</h3>
-      <ul class="cond-list">
+      <ul class="cond-list" id="conditions-content">
         <li>Vaccins obligatoires : CHPPiLR, Pneumodog (C, H, P, L)</li>
         <li>Identification obligatoire (tatouage ou puce électronique)</li>
         <li>Traitement antiparasitaire à jour (puces, tiques, vermifuge)</li>
@@ -708,7 +708,7 @@
       <div class="card">
         <span class="card-icon">🏠</span>
         <h3>Hébergement</h3>
-        <ul class="cond-list">
+        <ul class="cond-list" id="service-accommodation">
           <li>Box individuels avec courettes extérieures ombragées</li>
           <li>Jouets et accessoires de couchage acceptés</li>
           <li>Site sous vidéosurveillance intérieure et extérieure</li>
@@ -718,7 +718,7 @@
       <div class="card">
         <span class="card-icon">🌳</span>
         <h3>Promenades</h3>
-        <ul class="cond-list">
+        <ul class="cond-list" id="service-walks">
           <li>Balades quotidiennes au milieu des champs et des bois (dans la mesure du possible et notamment en fonction des conditions climatiques)</li>
           <li>Dépenses physiques et stimulation olfactive</li>
 		  <li>Canicross (en option)</li>
@@ -728,7 +728,7 @@
       <div class="card">
         <span class="card-icon">❤️</span>
         <h3>Soins & Attention</h3>
-        <ul class="cond-list">
+        <ul class="cond-list" id="service-care">
           <li>Pendant son séjour, vous pouvez me demander des photos et des nouvelles de votre chien. Je me ferai un plaisir de vous tenir informé de son séjour et de son bien-être.</li>
           <li>Clinique vétérinaire partenaire à 8 km</li>
           <li>Contact propriétaire en cas de besoin</li>
@@ -749,19 +749,19 @@
     <div class="tarif-card featured">
       <h3>Pour un chien</h3>
       <div class="price"><span id="price-one-dog">15</span>€ <span>/ jour</span></div>
-      <p class="price-sub" style="margin-top:14px">Hébergement en box individuel<br>avec courette extérieure ombragée.</p>
+      <p class="price-sub" id="price-one-description" style="margin-top:14px">Hébergement en box individuel<br>avec courette extérieure ombragée.</p>
     </div>
 	  
 	<div class="tarif-card featured">
       <h3>Pour deux chiens vivant ensemble</h3>
       <div class="price"><span id="price-two-dogs">25</span>€ <span>/ jour</span></div>
-      <p class="price-sub" style="margin-top:14px">Hébergement en box individuel<br>avec courette extérieure ombragée.</p>
+      <p class="price-sub" id="price-two-description" style="margin-top:14px">Hébergement en box individuel<br>avec courette extérieure ombragée.</p>
     </div>
   </div>
 
   <div class="supplement-box" style="max-width:800px;margin:30px auto 0">
     <p style="font-weight:700;margin-bottom:12px;font-size:1.05rem;color:#1976d2">💊 Suppléments à la demande :</p>
-    <ul style="margin-left:20px;color:var(--gris)">
+    <ul style="margin-left:20px;color:var(--gris)" id="supplements-content">
 	  <li><strong>Canicross: +1 € / Km</strong><br>
           <span style="font-size: 0.9rem; color: var(--gris);">Service effectué sur demande du propriétaire et jusqu'a 10km.</span></li>
       <li><strong>Administration de traitement médical :</strong> +2 € / jour<br>
@@ -772,7 +772,7 @@
   </div>
 
   <p style="text-align:center;margin-top:24px;color:var(--gris);font-size:0.88rem">
-    💳 TVA non applicable · Art. 293 B du CGI &nbsp;|&nbsp; SIRET : 99930940400013
+    <span id="price-legal">💳 TVA non applicable · Art. 293 B du CGI &nbsp;|&nbsp; SIRET : 99930940400013</span>
   </p>
 </section>
 
@@ -780,18 +780,18 @@
 <section id="photos" style="background:var(--vert-pale);border-radius:24px;max-width:100%;padding:60px 20px;">
   <div style="max-width:1100px;margin:auto">
     <p class="section-label">Galerie</p>
-    <h2>Photothèque</h2>
+    <h2 id="photos-title">Photothèque</h2>
     <p style="text-align:center;color:var(--gris);margin-bottom:28px">
-      Retrouvez les photos des chiens en séjour et de notre pension sur nos galeries.
+      <span id="photos-intro">Retrouvez les photos des chiens en séjour et de notre pension sur nos galeries.</span>
     </p>
     <div class="photo-grid fade-in">
-      <a href="https://www.facebook.com/profile.php?id=61579661851153" target="_blank" class="photo-link facebook">
+      <a href="https://www.facebook.com/profile.php?id=61579661851153" target="_blank" class="photo-link facebook" id="facebook-photos-link">
         📸 Chiens en pension (Facebook)
       </a>
-      <a href="phototheque-hebergement.html" class="photo-link home">
+      <a href="phototheque-hebergement.html" class="photo-link home" id="accommodation-photos-link">
         🏠 Hébergement
       </a>
-      <a href="phototheque-exterieur.html" class="photo-link nature">
+      <a href="phototheque-exterieur.html" class="photo-link nature" id="outdoor-photos-link">
         🌳 Espaces extérieurs
       </a>
     </div>
@@ -804,9 +804,9 @@
   <h2>Réservation</h2>
 
   <div style="text-align:center;margin-bottom:25px;color:var(--gris);font-size:0.95rem;line-height:1.7">
-    📧 Email : <strong>fgm.21140@gmail.com</strong><br>
-    📞 Téléphone : <strong>06 18 39 92 10</strong><br><br>
-    💡 Cliquez sur le bouton pour envoyer votre demande par email <br>
+    📧 Email : <strong id="contact-email">fgm.21140@gmail.com</strong><br>
+    📞 Téléphone : <strong id="contact-phone">06 18 39 92 10</strong><br><br>
+    <span id="booking-intro">💡 Cliquez sur le bouton pour envoyer votre demande par email</span><br>
 	    <a href="conditions-generales.html">📋 Conditions générales</a>
 
   </div>
@@ -867,13 +867,13 @@
       <div style="background:linear-gradient(135deg,#1b1b1b,#333);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
         <div style="display:flex;align-items:center;gap:14px">
           <span style="background:#c0392b;color:white;font-weight:700;font-size:0.75rem;padding:4px 12px;border-radius:4px;letter-spacing:0.1em;text-transform:uppercase">Actu Auxois</span>
-          <span style="color:rgba(255,255,255,0.6);font-size:0.82rem">Mercredi 25 mars 2026 · Page 13</span>
+          <span style="color:rgba(255,255,255,0.6);font-size:0.82rem"><span id="press-date">Mercredi 25 mars 2026 · Page 13</span></span>
         </div>
       </div>
 
       <div style="padding:28px 28px 0">
         <h3 style="font-family:'Playfair Display',serif;font-size:clamp(1.4rem,4vw,2rem);color:#1b1b1b;line-height:1.25;margin-bottom:16px">
-          Un retraité de l'armée ouvre une pension canine dans d'anciennes écuries
+          <span id="press-title">Un retraité de l’armée ouvre une pension canine dans d’anciennes écuries</span>
         </h3>
         <p style="color:var(--gris);font-size:0.9rem;line-height:1.7;margin-bottom:20px">
           <strong>Freddy Grené</strong>, retraité de l'armée, a ouvert mi-janvier la Pension canine de la Prêlée à Le Val-Larrey. Avec une capacité maximale d'accueil de neuf chiens, Freddy Grené espère faire de cette pension son activité principale et l'agrandir.
@@ -890,9 +890,9 @@
 
       <div style="margin:0 28px 28px;background:var(--vert-pale);border-left:4px solid var(--vert-clair);border-radius:0 10px 10px 0;padding:16px 20px">
         <p style="font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--vert);font-style:italic;line-height:1.6">
-          "Je ne veux pas une immense pension avec trois, quatre chiens dans une même courette. Je veux être une pension familiale."
+          <span id="press-quote">"Je ne veux pas une immense pension avec trois, quatre chiens dans une même courette. Je veux être une pension familiale."</span>
         </p>
-        <p style="margin-top:8px;font-size:0.82rem;font-weight:700;color:var(--gris)">— Freddy Grené</p>
+        <p style="margin-top:8px;font-size:0.82rem;font-weight:700;color:var(--gris)"><span id="press-signature">— Freddy Grené</span></p>
       </div>
 
     </div>
@@ -913,7 +913,7 @@
     <p style="color:var(--gris);font-size:0.88rem;margin-bottom:24px">
       Cela prend moins d'une minute sur Google 🙏
     </p>
-    <a href="https://g.page/r/CUb5xpFAQe_mEBM/review" target="_blank" class="google-review-btn">
+    <a href="https://g.page/r/CUb5xpFAQe_mEBM/review" target="_blank" class="google-review-btn" id="google-review-link">
       <svg width="22" height="22" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
         <path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/>
       </svg>
@@ -937,13 +937,13 @@
 <!-- ══ FOOTER ══ -->
 <footer>
   <strong>Pension Canine de La Prêlée</strong><br>
-  Le confort et le bien-être de votre chien avant tout<br>
+  <span id="footer-tagline">Le confort et le bien-être de votre chien avant tout</span><br>
   <span class="footer-siret">SIRET : 99930940400013</span><br>
   <span style="font-size:0.78rem;margin-top:6px;display:block">
     TVA non applicable · Art. 293 B du CGI
   </span>
   <div class="footer-links">
-    <a href="https://www.facebook.com/profile.php?id=61579661851153" target="_blank">📘 Facebook</a>
+    <a href="https://www.facebook.com/profile.php?id=61579661851153" target="_blank" id="footer-facebook">📘 Facebook</a>
     <a href="conditions-generales.html">📋 Conditions générales</a>
     <a href="#reservation">📋 Réservation</a>
     <a href="#carte">📍 Localisation</a>
@@ -1027,6 +1027,19 @@ ${message}`;
     if (page.hours_note) document.getElementById('hours-note').textContent = page.hours_note;
     if (Number.isFinite(Number(page.price_one_dog))) document.getElementById('price-one-dog').textContent = page.price_one_dog;
     if (Number.isFinite(Number(page.price_two_dogs))) document.getElementById('price-two-dogs').textContent = page.price_two_dogs;
+    const txt = (id,v) => { const e=document.getElementById(id); if(e && v!=null) e.textContent=v; };
+    const list = (id,v) => { const e=document.getElementById(id); if(e && v) e.innerHTML=v.split(/\\r?\\n/).filter(x=>x.trim()).map(x=>'<li>'+x.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')+'</li>').join(''); };
+    const link = (id,v) => { const e=document.getElementById(id); if(e && v) e.href=v; };
+    txt('hours-weekdays-label',page.hours_weekdays_label); txt('hours-weekend-label',page.hours_weekend_label);
+    list('conditions-content',page.conditions_content); list('service-accommodation',page.service_accommodation); list('service-walks',page.service_walks); list('service-care',page.service_care); list('supplements-content',page.supplements_content);
+    txt('price-one-description',page.price_one_description); txt('price-two-description',page.price_two_description); txt('price-legal',page.price_legal);
+    txt('contact-email',page.contact_email); txt('contact-phone',page.contact_phone); txt('booking-intro',page.booking_intro); txt('photos-intro',page.photos_intro);
+    link('facebook-photos-link',page.facebook_photos_url); txt('facebook-photos-link',page.facebook_photos_label);
+    link('accommodation-photos-link',page.accommodation_photos_url); txt('accommodation-photos-link',page.accommodation_photos_label);
+    link('outdoor-photos-link',page.outdoor_photos_url); txt('outdoor-photos-link',page.outdoor_photos_label);
+    txt('press-date',page.press_date); txt('press-title',page.press_title); txt('press-summary',page.press_summary); txt('press-quote',page.press_quote); txt('press-signature',page.press_signature);
+    link('google-review-link',page.google_review_url); txt('footer-tagline',page.footer_tagline); link('footer-facebook',page.facebook_page_url);
+
 
     if (page.show_message && page.reservation_message) {
       const section = document.getElementById('message-accueil');
