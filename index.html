@@ -669,15 +669,15 @@
       <h3>Entrées & Sorties</h3>
       <div class="horaires-bloc">
         <div class="horaire-row">
-          <span class="horaire-day">Lundi → Vendredi</span>
-          <span class="horaire-time">09h–12h · 14h–18h00</span>
+          <span class="horaire-day" id="hours-weekdays-label">Lundi → Vendredi</span>
+          <span class="horaire-time" id="hours-weekdays">09h–12h · 14h–18h00</span>
         </div>
         <div class="horaire-row">
-          <span class="horaire-day">Samedi → Dimanche</span>
-          <span class="horaire-time">09h–11h · 15h–17h00</span>
+          <span class="horaire-day" id="hours-weekend-label">Samedi → Dimanche</span>
+          <span class="horaire-time" id="hours-weekend">09h–11h · 15h–17h00</span>
         </div>
       </div>
-      <p style="margin-top:14px;font-size:0.85rem;color:var(--gris)">Notre pension familiale accueille vos chiens tous les jours de l'année.</p>
+      <p style="margin-top:14px;font-size:0.85rem;color:var(--gris)"><span id="hours-note">Notre pension familiale accueille vos chiens tous les jours de l’année.</span></p>
     </div>
 
     <div class="card">
@@ -748,13 +748,13 @@
 
     <div class="tarif-card featured">
       <h3>Pour un chien</h3>
-      <div class="price">15€ <span>/ jour</span></div>
+      <div class="price"><span id="price-one-dog">15</span>€ <span>/ jour</span></div>
       <p class="price-sub" style="margin-top:14px">Hébergement en box individuel<br>avec courette extérieure ombragée.</p>
     </div>
 	  
 	<div class="tarif-card featured">
       <h3>Pour deux chiens vivant ensemble</h3>
-      <div class="price">25€ <span>/ jour</span></div>
+      <div class="price"><span id="price-two-dogs">25</span>€ <span>/ jour</span></div>
       <p class="price-sub" style="margin-top:14px">Hébergement en box individuel<br>avec courette extérieure ombragée.</p>
     </div>
   </div>
@@ -1022,6 +1022,12 @@ ${message}`;
     if (eyebrow && page.eyebrow) eyebrow.textContent = page.eyebrow;
     if (title && page.title) title.textContent = page.title;
     if (description && page.description) description.textContent = page.description;
+    if (page.hours_weekdays) document.getElementById('hours-weekdays').textContent = page.hours_weekdays;
+    if (page.hours_weekend) document.getElementById('hours-weekend').textContent = page.hours_weekend;
+    if (page.hours_note) document.getElementById('hours-note').textContent = page.hours_note;
+    if (Number.isFinite(Number(page.price_one_dog))) document.getElementById('price-one-dog').textContent = page.price_one_dog;
+    if (Number.isFinite(Number(page.price_two_dogs))) document.getElementById('price-two-dogs').textContent = page.price_two_dogs;
+
     if (page.show_message && page.reservation_message) {
       const section = document.getElementById('message-accueil');
       const panel = section.querySelector('.home-notice-inner');
