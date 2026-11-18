@@ -31,6 +31,35 @@ collections:
           - {label: "Texte sous les horaires", name: "hours_note", widget: "string"}
           - {label: "Tarif pour un chien (€ / jour)", name: "price_one_dog", widget: "number", value_type: "int", min: 0}
           - {label: "Tarif pour deux chiens (€ / jour)", name: "price_two_dogs", widget: "number", value_type: "int", min: 0}
+
+          - {label: "Libellé jours semaine", name: "hours_weekdays_label", widget: "string"}
+          - {label: "Libellé week-end", name: "hours_weekend_label", widget: "string"}
+          - {label: "Conditions d'accueil (une ligne par point)", name: "conditions_content", widget: "text"}
+          - {label: "Hébergement (une ligne par point)", name: "service_accommodation", widget: "text"}
+          - {label: "Promenades (une ligne par point)", name: "service_walks", widget: "text"}
+          - {label: "Soins et attention (une ligne par point)", name: "service_care", widget: "text"}
+          - {label: "Description tarif 1 chien", name: "price_one_description", widget: "string"}
+          - {label: "Description tarif 2 chiens", name: "price_two_description", widget: "string"}
+          - {label: "Suppléments (une ligne par point)", name: "supplements_content", widget: "text"}
+          - {label: "Mention légale des tarifs", name: "price_legal", widget: "string"}
+          - {label: "Adresse e-mail", name: "contact_email", widget: "string"}
+          - {label: "Téléphone", name: "contact_phone", widget: "string"}
+          - {label: "Texte d'aide réservation", name: "booking_intro", widget: "string"}
+          - {label: "Introduction photothèque", name: "photos_intro", widget: "string"}
+          - {label: "Lien Facebook photos", name: "facebook_photos_url", widget: "string"}
+          - {label: "Libellé Facebook photos", name: "facebook_photos_label", widget: "string"}
+          - {label: "Lien photos hébergement", name: "accommodation_photos_url", widget: "string"}
+          - {label: "Libellé photos hébergement", name: "accommodation_photos_label", widget: "string"}
+          - {label: "Lien photos extérieurs", name: "outdoor_photos_url", widget: "string"}
+          - {label: "Libellé photos extérieurs", name: "outdoor_photos_label", widget: "string"}
+          - {label: "Date et source presse", name: "press_date", widget: "string"}
+          - {label: "Titre presse", name: "press_title", widget: "string"}
+          - {label: "Résumé presse", name: "press_summary", widget: "text"}
+          - {label: "Citation presse", name: "press_quote", widget: "text"}
+          - {label: "Signature presse", name: "press_signature", widget: "string"}
+          - {label: "Lien avis Google", name: "google_review_url", widget: "string"}
+          - {label: "Texte pied de page", name: "footer_tagline", widget: "string"}
+          - {label: "Lien Facebook pied de page", name: "facebook_page_url", widget: "string"}
   - name: "actualites"
     label: "Actualités"
     folder: "actualites"
