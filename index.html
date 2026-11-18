@@ -978,7 +978,7 @@ Message:
 ${message}`;
 
   window.open(
-    "mailto:fgm.21140@gmail.com"
+    "mailto:" + (window.PENSION_CONTACT_EMAIL || "fgm.21140@gmail.com")
     + "?subject=" + encodeURIComponent(subject)
     + "&body=" + encodeURIComponent(body),
     "_blank"
@@ -1028,12 +1028,12 @@ ${message}`;
     if (Number.isFinite(Number(page.price_one_dog))) document.getElementById('price-one-dog').textContent = page.price_one_dog;
     if (Number.isFinite(Number(page.price_two_dogs))) document.getElementById('price-two-dogs').textContent = page.price_two_dogs;
     const txt = (id,v) => { const e=document.getElementById(id); if(e && v!=null) e.textContent=v; };
-    const list = (id,v) => { const e=document.getElementById(id); if(e && v) e.innerHTML=v.split(/\\r?\\n/).filter(x=>x.trim()).map(x=>'<li>'+x.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')+'</li>').join(''); };
+    const list = (id,v) => { const e=document.getElementById(id); if(e && v) e.innerHTML=v.split(/\r?\n/).filter(x=>x.trim()).map(x=>'<li>'+x.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')+'</li>').join(''); };
     const link = (id,v) => { const e=document.getElementById(id); if(e && v) e.href=v; };
     txt('hours-weekdays-label',page.hours_weekdays_label); txt('hours-weekend-label',page.hours_weekend_label);
     list('conditions-content',page.conditions_content); list('service-accommodation',page.service_accommodation); list('service-walks',page.service_walks); list('service-care',page.service_care); list('supplements-content',page.supplements_content);
     txt('price-one-description',page.price_one_description); txt('price-two-description',page.price_two_description); txt('price-legal',page.price_legal);
-    txt('contact-email',page.contact_email); txt('contact-phone',page.contact_phone); txt('booking-intro',page.booking_intro); txt('photos-intro',page.photos_intro);
+    txt('contact-email',page.contact_email); txt('contact-phone',page.contact_phone); if(page.contact_email) window.PENSION_CONTACT_EMAIL=page.contact_email; txt('booking-intro',page.booking_intro); txt('photos-intro',page.photos_intro);
     link('facebook-photos-link',page.facebook_photos_url); txt('facebook-photos-link',page.facebook_photos_label);
     link('accommodation-photos-link',page.accommodation_photos_url); txt('accommodation-photos-link',page.accommodation_photos_label);
     link('outdoor-photos-link',page.outdoor_photos_url); txt('outdoor-photos-link',page.outdoor_photos_label);
