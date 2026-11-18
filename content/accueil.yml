@@ -14,3 +14,9 @@ reservation_message: >-
   Anticipez vos réservations afin de garantir une place à votre compagnon 🐶
 message_style: blue
 show_message: true
+
+hours_weekdays: "09h–12h · 14h–18h00"
+hours_weekend: "09h–11h · 15h–17h00"
+hours_note: "Notre pension familiale accueille vos chiens tous les jours de l'année."
+price_one_dog: 15
+price_two_dogs: 25
