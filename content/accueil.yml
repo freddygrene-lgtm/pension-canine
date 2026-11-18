@@ -19,3 +19,51 @@ hours_weekend: 09h–11h · 15h–17h00
 hours_note: Notre pension familiale accueille vos chiens tous les jours de l'année.
 price_one_dog: 15
 price_two_dogs: 25
+
+
+hours_weekdays_label: "Lundi → Vendredi"
+hours_weekend_label: "Samedi → Dimanche"
+conditions_content: |
+  Vaccins obligatoires : CHPPiLR, Pneumodog (C, H, P, L)
+  Identification obligatoire (tatouage ou puce électronique)
+  Traitement antiparasitaire à jour (puces, tiques, vermifuge)
+  Nourriture à fournir par le propriétaire
+  Journée d'essai possible le week-end selon le chien
+  En réservant un séjour, vous acceptez les conditions générales ci-dessous.
+service_accommodation: |
+  Box individuels avec courettes extérieures ombragées
+  Jouets et accessoires de couchage acceptés
+  Site sous vidéosurveillance intérieure et extérieure
+service_walks: |
+  Balades quotidiennes au milieu des champs et des bois, selon les conditions climatiques
+  Dépenses physiques et stimulation olfactive
+  Canicross (en option)
+service_care: |
+  Vous pouvez demander des photos et des nouvelles de votre chien pendant son séjour
+  Clinique vétérinaire partenaire à 8 km
+  Contact propriétaire en cas de besoin
+price_one_description: "Hébergement en box individuel avec courette extérieure ombragée."
+price_two_description: "Hébergement en box individuel avec courette extérieure ombragée."
+supplements_content: |
+  **Canicross : +1 € / km** — sur demande du propriétaire, jusqu'à 10 km.
+  **Administration de traitement médical : +2 € / jour** — pilules, sirops, pommades, collyres.
+  **Alimentation nécessitant une mise au frais : +2 € / jour** — viande et autres aliments frais.
+price_legal: "TVA non applicable · Art. 293 B du CGI | SIRET : 99930940400013"
+contact_email: "fgm.21140@gmail.com"
+contact_phone: "06 18 39 92 10"
+booking_intro: "💡 Cliquez sur le bouton pour envoyer votre demande par email."
+photos_intro: "Retrouvez les photos des chiens en séjour et de notre pension sur nos galeries."
+facebook_photos_url: "https://www.facebook.com/profile.php?id=61579661851153"
+facebook_photos_label: "📸 Chiens en pension (Facebook)"
+accommodation_photos_url: "phototheque-hebergement.html"
+accommodation_photos_label: "🏠 Hébergement"
+outdoor_photos_url: "phototheque-exterieur.html"
+outdoor_photos_label: "🌳 Espaces extérieurs"
+press_date: "Mercredi 25 mars 2026 · Page 13"
+press_title: "Un retraité de l'armée ouvre une pension canine dans d'anciennes écuries"
+press_summary: "Freddy Grené, retraité de l'armée, a ouvert mi-janvier la Pension canine de la Prêlée à Le Val-Larrey. Avec une capacité maximale d'accueil de neuf chiens, Freddy Grené espère faire de cette pension son activité principale et l'agrandir."
+press_quote: "Je ne veux pas une immense pension avec trois, quatre chiens dans une même courette. Je veux être une pension familiale."
+press_signature: "— Freddy Grené"
+google_review_url: "https://g.page/r/CUb5xpFAQe_mEBM/review"
+footer_tagline: "Le confort et le bien-être de votre chien avant tout"
+facebook_page_url: "https://www.facebook.com/profile.php?id=61579661851153"
